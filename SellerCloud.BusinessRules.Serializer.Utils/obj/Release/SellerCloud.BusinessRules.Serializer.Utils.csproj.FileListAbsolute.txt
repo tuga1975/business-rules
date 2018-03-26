@@ -1,0 +1,8 @@
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Serializer.Utils\bin\Release\SellerCloud.BusinessRules.Serializer.Utils.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Serializer.Utils\bin\Release\SellerCloud.BusinessRules.Serializer.Utils.pdb
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Serializer.Utils\bin\Release\Newtonsoft.Json.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Serializer.Utils\bin\Release\Newtonsoft.Json.xml
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Serializer.Utils\obj\Release\SellerCloud.BusinessRules.Serializer.Utils.csproj.CoreCompileInputs.cache
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Serializer.Utils\obj\Release\SellerCloud.BusinessRules.Serializer.Utils.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Serializer.Utils\obj\Release\SellerCloud.BusinessRules.Serializer.Utils.pdb
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Serializer.Utils\obj\Release\SellerCloud.BusinessRules.Serializer.Utils.csprojResolveAssemblyReference.cache

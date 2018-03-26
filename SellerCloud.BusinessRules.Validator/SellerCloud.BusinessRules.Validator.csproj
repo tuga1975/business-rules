@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C6E1ECF3-3D15-4683-9A4C-56C041919E65}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SellerCloud.BusinessRules.Validator</RootNamespace>
+    <AssemblyName>SellerCloud.BusinessRules.Validator</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConflictingRules.cs" />
+    <Compile Include="IConflictingRules.cs" />
+    <Compile Include="IRuleModuleActionContainer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RuleModuleActionContainer.cs" />
+    <Compile Include="RuleModuleValidator.cs" />
+    <Compile Include="RulesTreeValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SellerCloud.BusinessRules.Compilers\SellerCloud.BusinessRules.Compilers.csproj">
+      <Project>{B3E2C500-D55E-4840-AE87-AB4657BC0AA0}</Project>
+      <Name>SellerCloud.BusinessRules.Compilers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SellerCloud.BusinessRules.EntityTracking\SellerCloud.BusinessRules.EntityTracking.csproj">
+      <Project>{1ACC1EAE-BA37-42FC-8CAA-10B60E8E16B2}</Project>
+      <Name>SellerCloud.BusinessRules.EntityTracking</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SellerCloud.BusinessRules.Rules\SellerCloud.BusinessRules.Rules.csproj">
+      <Project>{ebf744a7-1fff-4fc4-8709-f110f9f8c3a6}</Project>
+      <Name>SellerCloud.BusinessRules.Rules</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

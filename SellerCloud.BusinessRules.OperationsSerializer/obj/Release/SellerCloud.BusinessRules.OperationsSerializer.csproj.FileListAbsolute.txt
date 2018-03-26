@@ -1,0 +1,16 @@
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.OperationsSerializer\bin\Release\SellerCloud.BusinessRules.OperationsSerializer.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.OperationsSerializer\bin\Release\SellerCloud.BusinessRules.OperationsSerializer.pdb
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.OperationsSerializer\bin\Release\Newtonsoft.Json.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.OperationsSerializer\bin\Release\SellerCloud.BusinessRules.Attributes.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.OperationsSerializer\bin\Release\SellerCloud.BusinessRules.Extensions.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.OperationsSerializer\bin\Release\SellerCloud.BusinessRules.Rules.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.OperationsSerializer\bin\Release\SellerCloud.BusinessRules.Serializer.Utils.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.OperationsSerializer\bin\Release\SellerCloud.BusinessRules.Attributes.pdb
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.OperationsSerializer\bin\Release\SellerCloud.BusinessRules.Extensions.pdb
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.OperationsSerializer\bin\Release\SellerCloud.BusinessRules.Rules.pdb
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.OperationsSerializer\bin\Release\SellerCloud.BusinessRules.Serializer.Utils.pdb
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.OperationsSerializer\bin\Release\Newtonsoft.Json.xml
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.OperationsSerializer\obj\Release\SellerCloud.BusinessRules.OperationsSerializer.csprojResolveAssemblyReference.cache
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.OperationsSerializer\obj\Release\SellerCloud.BusinessRules.OperationsSerializer.csproj.CoreCompileInputs.cache
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.OperationsSerializer\obj\Release\SellerCloud.BusinessRules.OperationsSerializer.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.OperationsSerializer\obj\Release\SellerCloud.BusinessRules.OperationsSerializer.pdb

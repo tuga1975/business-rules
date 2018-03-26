@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6032B259-AA6A-4A79-95AE-4492B329BD0F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SellerCloud.BusinessRules.DAL</RootNamespace>
+    <AssemblyName>SellerCloud.BusinessRules.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BLToolkit.4, Version=4.3.9.0, Culture=neutral, PublicKeyToken=b1d3f6ab3aadaca3, processorArchitecture=MSIL">
+      <HintPath>..\..\ShipUI\packages\BLToolkit.4.3.9\lib\net40\BLToolkit.4.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\ShipUI\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Z.EntityFramework.Plus.EF6, Version=1.7.14.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
+      <HintPath>..\..\ShipUI\packages\Z.EntityFramework.Plus.EF6.1.7.14\lib\net45\Z.EntityFramework.Plus.EF6.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessRulesEngineEFModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BusinessRulesEngineEFModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessRulesEngineEFModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BusinessRulesEngineEFModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessRulesEngineEFModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BusinessRulesEngineEFModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessRulesEngineEntities.cs" />
+    <Compile Include="DTO\DTO_Entities.cs" />
+    <Compile Include="IBusinessRulesEngineContext.cs" />
+    <Compile Include="IDbContext.cs" />
+    <Compile Include="Mapper\BusinessRuleMapper.cs" />
+    <Compile Include="Mapper\BusinessRuleMapperConfiguration.cs" />
+    <Compile Include="Mapper\BusinessRuleMapperTarget.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BusinessRulesEngineUnitOfWork.cs" />
+    <Compile Include="Mapper\BusinessRuleDomainEntityMapper.cs" />
+    <Compile Include="Repositories\DbContextEntryTrackingExtensions.cs" />
+    <Compile Include="EntityOrderHelper.cs" />
+    <Compile Include="Repositories\IRuleArgumentRepository.cs" />
+    <Compile Include="Repositories\RuleArgumentRepository.cs" />
+    <Compile Include="Repositories\GenericRepository.cs" />
+    <Compile Include="Rule.cs">
+      <DependentUpon>BusinessRulesEngineEFModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RuleArgument.cs">
+      <DependentUpon>BusinessRulesEngineEFModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RuleModule.cs">
+      <DependentUpon>BusinessRulesEngineEFModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RuleModuleCompanyLink.cs">
+      <DependentUpon>BusinessRulesEngineEFModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Services\BusinessRulesEngineService.cs" />
+    <Compile Include="Services\IBusinessRulesEngineService.cs" />
+    <Compile Include="IBusinessRulesEngineUnitOfWork.cs" />
+    <Compile Include="Repositories\IGenericRepository.cs" />
+    <Compile Include="Repositories\IRuleModuleRepository.cs" />
+    <Compile Include="Services\IBusinessRuleService.cs" />
+    <Compile Include="Services\IRuleArgumentService.cs" />
+    <Compile Include="Services\IRuleModuleService.cs" />
+    <Compile Include="Repositories\IRuleRepository.cs" />
+    <Compile Include="Services\IRuleService.cs" />
+    <Compile Include="Repositories\RuleModuleRepository.cs" />
+    <Compile Include="Services\RuleArgumentService.cs" />
+    <Compile Include="Services\RuleModuleService.cs" />
+    <Compile Include="Repositories\RuleRepository.cs" />
+    <Compile Include="Services\RuleService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="BusinessRulesEngineEFModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BusinessRulesEngineEFModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="BusinessRulesEngineEFModel.edmx.diagram">
+      <DependentUpon>BusinessRulesEngineEFModel.edmx</DependentUpon>
+    </None>
+    <None Include="NuGetReferenceHintPathRewrite.targets" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BusinessRules.Engine\SellerCloud.BusinessRules.Extensions\SellerCloud.BusinessRules.Extensions.csproj">
+      <Project>{3D35BEB9-B4BB-433B-87EC-4BC91B9088DF}</Project>
+      <Name>SellerCloud.BusinessRules.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BusinessRules.Engine\SellerCloud.BusinessRules.Rules\SellerCloud.BusinessRules.Rules.csproj">
+      <Project>{ebf744a7-1fff-4fc4-8709-f110f9f8c3a6}</Project>
+      <Name>SellerCloud.BusinessRules.Rules</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BusinessRulesEngineEFModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BusinessRulesEngineEFModel.edmx</DependentUpon>
+      <LastGenOutput>BusinessRulesEngineEFModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="BusinessRulesEngineEFModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BusinessRulesEngineEFModel.edmx</DependentUpon>
+      <LastGenOutput>BusinessRulesEngineEFModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="NuGetReferenceHintPathRewrite.targets" />
+</Project>

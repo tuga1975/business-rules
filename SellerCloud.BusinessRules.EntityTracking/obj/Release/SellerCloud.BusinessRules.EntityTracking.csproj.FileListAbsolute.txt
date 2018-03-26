@@ -1,0 +1,14 @@
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.EntityTracking\bin\Release\SellerCloud.BusinessRules.EntityTracking.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.EntityTracking\bin\Release\SellerCloud.BusinessRules.EntityTracking.pdb
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.EntityTracking\bin\Release\SellerCloud.BusinessRules.Extensions.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.EntityTracking\bin\Release\SellerCloud.BusinessRules.Attributes.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.EntityTracking\bin\Release\SellerCloud.BusinessRules.Extensions.pdb
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.EntityTracking\bin\Release\SellerCloud.BusinessRules.Attributes.pdb
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.EntityTracking\obj\Release\SellerCloud.BusinessRules.EntityTracking.csprojResolveAssemblyReference.cache
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.EntityTracking\obj\Release\SellerCloud.BusinessRules.EntityTracking.csproj.CoreCompileInputs.cache
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.EntityTracking\obj\Release\SellerCloud.BusinessRules.EntityTracking.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.EntityTracking\obj\Release\SellerCloud.BusinessRules.EntityTracking.pdb
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.EntityTracking\bin\Release\SellerCloud.BusinessRules.Rules.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.EntityTracking\bin\Release\Newtonsoft.Json.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.EntityTracking\bin\Release\SellerCloud.BusinessRules.Rules.pdb
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.EntityTracking\bin\Release\Newtonsoft.Json.xml

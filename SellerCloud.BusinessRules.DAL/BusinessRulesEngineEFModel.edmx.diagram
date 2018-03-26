@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="706d3541ff614945acb703882259112d" Name="Diagram1">
+        <EntityTypeShape EntityType="BusinessRulesEngineEFModel.Rule" Width="1.5" PointX="3.125" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BusinessRulesEngineEFModel.RuleArgument" Width="1.5" PointX="5.25" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BusinessRulesEngineEFModel.RuleModule" Width="2.25" PointX="0.625" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="BusinessRulesEngineEFModel.FK_Rule_RuleModule_IdRuleModule" ManuallyRouted="false" />
+        <AssociationConnector Association="BusinessRulesEngineEFModel.FK_RuleArgument_Rule_IdRule" ManuallyRouted="false" />
+        <AssociationConnector Association="BusinessRulesEngineEFModel.FK_RuleModule_RuleModule_IdParentRuleModule" ManuallyRouted="false" />
+        <AssociationConnector Association="BusinessRulesEngineEFModel.FK_RuleModule_RuleModule_IdRootRuleModule" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="BusinessRulesEngineEFModel.RuleModuleCompanyLink" Width="1.5" PointX="4.375" PointY="4.75" />
+        <AssociationConnector Association="BusinessRulesEngineEFModel.FK_RuleModuleCompanyLink_RuleModule_IdRuleModule" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

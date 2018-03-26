@@ -1,0 +1,8 @@
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Extensions\bin\Release\SellerCloud.BusinessRules.Extensions.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Extensions\bin\Release\SellerCloud.BusinessRules.Extensions.pdb
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Extensions\bin\Release\SellerCloud.BusinessRules.Attributes.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Extensions\bin\Release\SellerCloud.BusinessRules.Attributes.pdb
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Extensions\obj\Release\SellerCloud.BusinessRules.Extensions.csprojResolveAssemblyReference.cache
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Extensions\obj\Release\SellerCloud.BusinessRules.Extensions.csproj.CoreCompileInputs.cache
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Extensions\obj\Release\SellerCloud.BusinessRules.Extensions.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Extensions\obj\Release\SellerCloud.BusinessRules.Extensions.pdb

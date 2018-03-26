@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BusinessRulesEngineEFModelStoreContainer" CdmEntityContainer="BusinessRulesEngineEntities">
+    <EntitySetMapping Name="Rule">
+      <EntityTypeMapping TypeName="BusinessRulesEngineEFModel.Rule">
+        <MappingFragment StoreEntitySet="Rule">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdRuleModule" ColumnName="IdRuleModule" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Expression" ColumnName="Expression" />
+          <ScalarProperty Name="RuleType" ColumnName="RuleType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RuleArgument">
+      <EntityTypeMapping TypeName="BusinessRulesEngineEFModel.RuleArgument">
+        <MappingFragment StoreEntitySet="RuleArgument">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ValueKey" ColumnName="ValueKey" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdRule" ColumnName="IdRule" />
+          <ScalarProperty Name="ValueXml" ColumnName="ValueXml" />
+          <ScalarProperty Name="ValueType" ColumnName="ValueType" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RuleModule">
+      <EntityTypeMapping TypeName="BusinessRulesEngineEFModel.RuleModule">
+        <MappingFragment StoreEntitySet="RuleModule">
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="ContextType" ColumnName="ContextType" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IdParentRuleModule" ColumnName="IdParentRuleModule" />
+          <ScalarProperty Name="IdRootRuleModule" ColumnName="IdRootRuleModule" />
+          <ScalarProperty Name="PathType" ColumnName="PathType" />
+          <ScalarProperty Name="RuleModuleType" ColumnName="RuleModuleType" />
+          <ScalarProperty Name="BooleanEvalLogic" ColumnName="BooleanEvalLogic" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RuleModuleCompanyLink">
+      <EntityTypeMapping TypeName="BusinessRulesEngineEFModel.RuleModuleCompanyLink">
+        <MappingFragment StoreEntitySet="RuleModuleCompanyLink">
+          <ScalarProperty Name="IdCompany" ColumnName="IdCompany" />
+          <ScalarProperty Name="IdRuleModule" ColumnName="IdRuleModule" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

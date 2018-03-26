@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F1215AC9-46B5-4460-86E1-2D685165A843}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SellerCloud.BusinessRules.Services</RootNamespace>
+    <AssemblyName>SellerCloud.BusinessRules.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RuleModuleTestService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ShipUI\SellerCloud.ShipUI.EntityContext\SellerCloud.ShipUI.EntityContext.csproj">
+      <Project>{A7C2FFDC-A2D6-4855-8414-A8AA526B151A}</Project>
+      <Name>SellerCloud.ShipUI.EntityContext</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ShipUI\ShipUI.Domain\ShipUI.Domain.csproj">
+      <Project>{5183AC1F-9159-4E00-A660-32EA9E47DAB6}</Project>
+      <Name>ShipUI.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ShipUI\ShipUI.Facade\ShipUI.Facade.csproj">
+      <Project>{4A2027BB-CB44-4E56-AD78-1CB86FBEA8A4}</Project>
+      <Name>ShipUI.Facade</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SellerCloud.BusinessRules.Compilers\SellerCloud.BusinessRules.Compilers.csproj">
+      <Project>{B3E2C500-D55E-4840-AE87-AB4657BC0AA0}</Project>
+      <Name>SellerCloud.BusinessRules.Compilers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SellerCloud.BusinessRules.DAL\SellerCloud.BusinessRules.DAL.csproj">
+      <Project>{6032B259-AA6A-4A79-95AE-4492B329BD0F}</Project>
+      <Name>SellerCloud.BusinessRules.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SellerCloud.BusinessRules.EntityTracking\SellerCloud.BusinessRules.EntityTracking.csproj">
+      <Project>{1ACC1EAE-BA37-42FC-8CAA-10B60E8E16B2}</Project>
+      <Name>SellerCloud.BusinessRules.EntityTracking</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SellerCloud.BusinessRules.Rules\SellerCloud.BusinessRules.Rules.csproj">
+      <Project>{EBF744A7-1FFF-4FC4-8709-F110F9F8C3A6}</Project>
+      <Name>SellerCloud.BusinessRules.Rules</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

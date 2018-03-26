@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BusinessRulesEngineEFModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Rule">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdRuleModule" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="Expression" Type="nvarchar" MaxLength="1000" Nullable="false" />
+          <Property Name="RuleType" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RuleArgument">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdRule" Type="int" Nullable="false" />
+          <Property Name="ValueXml" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ValueType" Type="nvarchar" MaxLength="1000" Nullable="false" />
+          <Property Name="Position" Type="int" Nullable="false" />
+          <Property Name="ValueKey" Type="nvarchar" MaxLength="100" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RuleModule">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="IdParentRuleModule" Type="int" />
+          <Property Name="IdRootRuleModule" Type="int" />
+          <Property Name="IfTrueId" Type="int" />
+          <Property Name="IfFalseId" Type="int" />
+          <Property Name="PathType" Type="int" />
+          <Property Name="RuleModuleType" Type="int" Nullable="false" />
+          <Property Name="BooleanEvalLogic" Type="int" />
+          <Property Name="ContextType" Type="nvarchar" MaxLength="500" />
+          <Property Name="ClientID" Type="int" />
+          <Property Name="EnabledFlag" Type="bit" />
+        </EntityType>
+        <EntityType Name="RuleModuleCompanyLink">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdRuleModule" Type="int" Nullable="false" />
+          <Property Name="IdCompany" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Rule_RuleModule_IdRuleModule">
+          <End Role="RuleModule" Type="Self.RuleModule" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Rule" Type="Self.Rule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RuleModule">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Rule">
+              <PropertyRef Name="IdRuleModule" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RuleArgument_Rule_IdRule">
+          <End Role="Rule" Type="Self.Rule" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="RuleArgument" Type="Self.RuleArgument" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rule">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RuleArgument">
+              <PropertyRef Name="IdRule" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RuleModule_RuleModule_IdParentRuleModule">
+          <End Role="RuleModule" Type="Self.RuleModule" Multiplicity="0..1" />
+          <End Role="RuleModule1" Type="Self.RuleModule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RuleModule">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RuleModule1">
+              <PropertyRef Name="IdParentRuleModule" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RuleModule_RuleModule_IdRootRuleModule">
+          <End Role="RuleModule" Type="Self.RuleModule" Multiplicity="0..1" />
+          <End Role="RuleModule1" Type="Self.RuleModule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RuleModule">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RuleModule1">
+              <PropertyRef Name="IdRootRuleModule" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RuleModuleCompanyLink_RuleModule_IdRuleModule">
+          <End Role="RuleModule" Type="Self.RuleModule" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="RuleModuleCompanyLink" Type="Self.RuleModuleCompanyLink" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RuleModule">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RuleModuleCompanyLink">
+              <PropertyRef Name="IdRuleModule" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BusinessRulesEngineEFModelStoreContainer">
+          <EntitySet Name="Rule" EntityType="Self.Rule" Schema="BusinessRulesEngine" store:Type="Tables" />
+          <EntitySet Name="RuleArgument" EntityType="Self.RuleArgument" Schema="BusinessRulesEngine" store:Type="Tables" />
+          <EntitySet Name="RuleModule" EntityType="Self.RuleModule" Schema="BusinessRulesEngine" store:Type="Tables" />
+          <EntitySet Name="RuleModuleCompanyLink" EntityType="Self.RuleModuleCompanyLink" Schema="BusinessRulesEngine" store:Type="Tables" />
+          <AssociationSet Name="FK_Rule_RuleModule_IdRuleModule" Association="Self.FK_Rule_RuleModule_IdRuleModule">
+            <End Role="RuleModule" EntitySet="RuleModule" />
+            <End Role="Rule" EntitySet="Rule" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RuleArgument_Rule_IdRule" Association="Self.FK_RuleArgument_Rule_IdRule">
+            <End Role="Rule" EntitySet="Rule" />
+            <End Role="RuleArgument" EntitySet="RuleArgument" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RuleModule_RuleModule_IdParentRuleModule" Association="Self.FK_RuleModule_RuleModule_IdParentRuleModule">
+            <End Role="RuleModule" EntitySet="RuleModule" />
+            <End Role="RuleModule1" EntitySet="RuleModule" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RuleModule_RuleModule_IdRootRuleModule" Association="Self.FK_RuleModule_RuleModule_IdRootRuleModule">
+            <End Role="RuleModule" EntitySet="RuleModule" />
+            <End Role="RuleModule1" EntitySet="RuleModule" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RuleModuleCompanyLink_RuleModule_IdRuleModule" Association="Self.FK_RuleModuleCompanyLink_RuleModule_IdRuleModule">
+            <End Role="RuleModule" EntitySet="RuleModule" />
+            <End Role="RuleModuleCompanyLink" EntitySet="RuleModuleCompanyLink" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BusinessRulesEngineEFModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Rule">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdRuleModule" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Expression" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RuleType" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="RuleModule" Relationship="Self.FK_Rule_RuleModule_IdRuleModule" FromRole="Rule" ToRole="RuleModule" />
+          <NavigationProperty Name="Arguments" Relationship="Self.FK_RuleArgument_Rule_IdRule" FromRole="Rule" ToRole="RuleArgument" />
+        </EntityType>
+        <EntityType Name="RuleArgument">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdRule" Type="Int32" Nullable="false" />
+          <Property Name="ValueXml" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ValueType" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Position" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Rule" Relationship="Self.FK_RuleArgument_Rule_IdRule" FromRole="RuleArgument" ToRole="Rule" />
+          <Property Name="ValueKey" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="RuleModule">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="IdParentRuleModule" Type="Int32" />
+          <Property Name="IdRootRuleModule" Type="Int32" />
+          <Property Name="PathType" Type="Int32" />
+          <Property Name="RuleModuleType" Type="Int32" Nullable="false" />
+          <Property Name="BooleanEvalLogic" Type="Int32" />
+          <NavigationProperty Name="Rules" Relationship="Self.FK_Rule_RuleModule_IdRuleModule" FromRole="RuleModule" ToRole="Rule" />
+          <NavigationProperty Name="RuleModuleParentLink" Relationship="Self.FK_RuleModule_RuleModule_IdParentRuleModule" FromRole="RuleModule" ToRole="RuleModule1" />
+          <NavigationProperty Name="ParentRuleModule" Relationship="Self.FK_RuleModule_RuleModule_IdParentRuleModule" FromRole="RuleModule1" ToRole="RuleModule" />
+          <NavigationProperty Name="RuleModuleRootLink" Relationship="Self.FK_RuleModule_RuleModule_IdRootRuleModule" FromRole="RuleModule" ToRole="RuleModule1" />
+          <NavigationProperty Name="RootRuleModule" Relationship="Self.FK_RuleModule_RuleModule_IdRootRuleModule" FromRole="RuleModule1" ToRole="RuleModule" />
+          <NavigationProperty Name="RuleModuleCompanyLinks" Relationship="BusinessRulesEngineEFModel.FK_RuleModuleCompanyLink_RuleModule_IdRuleModule" FromRole="RuleModule" ToRole="RuleModuleCompanyLink" />
+          <Property Name="ContextType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ClientID" Type="Int32" />
+          <Property Name="IfTrueId" Type="Int32" />
+          <Property Name="IfFalseId" Type="Int32" />
+          <Property Name="EnabledFlag" Type="Boolean" />
+        </EntityType>
+        <Association Name="FK_Rule_RuleModule_IdRuleModule">
+          <End Role="RuleModule" Type="Self.RuleModule" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Rule" Type="Self.Rule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RuleModule">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Rule">
+              <PropertyRef Name="IdRuleModule" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RuleArgument_Rule_IdRule">
+          <End Role="Rule" Type="Self.Rule" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="RuleArgument" Type="Self.RuleArgument" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rule">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RuleArgument">
+              <PropertyRef Name="IdRule" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RuleModule_RuleModule_IdParentRuleModule">
+          <End Role="RuleModule" Type="Self.RuleModule" Multiplicity="0..1" />
+          <End Role="RuleModule1" Type="Self.RuleModule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RuleModule">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RuleModule1">
+              <PropertyRef Name="IdParentRuleModule" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RuleModule_RuleModule_IdRootRuleModule">
+          <End Role="RuleModule" Type="Self.RuleModule" Multiplicity="0..1" />
+          <End Role="RuleModule1" Type="Self.RuleModule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RuleModule">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RuleModule1">
+              <PropertyRef Name="IdRootRuleModule" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BusinessRulesEngineEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Rule" EntityType="Self.Rule" />
+          <EntitySet Name="RuleArgument" EntityType="Self.RuleArgument" />
+          <EntitySet Name="RuleModule" EntityType="Self.RuleModule" />
+          <AssociationSet Name="FK_Rule_RuleModule_IdRuleModule" Association="Self.FK_Rule_RuleModule_IdRuleModule">
+            <End Role="RuleModule" EntitySet="RuleModule" />
+            <End Role="Rule" EntitySet="Rule" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RuleArgument_Rule_IdRule" Association="Self.FK_RuleArgument_Rule_IdRule">
+            <End Role="Rule" EntitySet="Rule" />
+            <End Role="RuleArgument" EntitySet="RuleArgument" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RuleModule_RuleModule_IdParentRuleModule" Association="Self.FK_RuleModule_RuleModule_IdParentRuleModule">
+            <End Role="RuleModule" EntitySet="RuleModule" />
+            <End Role="RuleModule1" EntitySet="RuleModule" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RuleModule_RuleModule_IdRootRuleModule" Association="Self.FK_RuleModule_RuleModule_IdRootRuleModule">
+            <End Role="RuleModule" EntitySet="RuleModule" />
+            <End Role="RuleModule1" EntitySet="RuleModule" />
+          </AssociationSet>
+          <EntitySet Name="RuleModuleCompanyLink" EntityType="BusinessRulesEngineEFModel.RuleModuleCompanyLink" />
+          <AssociationSet Name="FK_RuleModuleCompanyLink_RuleModule_IdRuleModule" Association="BusinessRulesEngineEFModel.FK_RuleModuleCompanyLink_RuleModule_IdRuleModule">
+            <End Role="RuleModule" EntitySet="RuleModule" />
+            <End Role="RuleModuleCompanyLink" EntitySet="RuleModuleCompanyLink" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="RuleModuleCompanyLink">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdRuleModule" Type="Int32" Nullable="false" />
+          <Property Name="IdCompany" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="RuleModule" Relationship="BusinessRulesEngineEFModel.FK_RuleModuleCompanyLink_RuleModule_IdRuleModule" FromRole="RuleModuleCompanyLink" ToRole="RuleModule" />
+        </EntityType>
+        <Association Name="FK_RuleModuleCompanyLink_RuleModule_IdRuleModule">
+          <End Type="BusinessRulesEngineEFModel.RuleModule" Role="RuleModule" Multiplicity="1" />
+          <End Type="BusinessRulesEngineEFModel.RuleModuleCompanyLink" Role="RuleModuleCompanyLink" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RuleModule">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RuleModuleCompanyLink">
+              <PropertyRef Name="IdRuleModule" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BusinessRulesEngineEFModelStoreContainer" CdmEntityContainer="BusinessRulesEngineEntities">
+          <EntitySetMapping Name="Rule">
+            <EntityTypeMapping TypeName="BusinessRulesEngineEFModel.Rule">
+              <MappingFragment StoreEntitySet="Rule">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdRuleModule" ColumnName="IdRuleModule" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Expression" ColumnName="Expression" />
+                <ScalarProperty Name="RuleType" ColumnName="RuleType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RuleArgument">
+            <EntityTypeMapping TypeName="BusinessRulesEngineEFModel.RuleArgument">
+              <MappingFragment StoreEntitySet="RuleArgument">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ValueKey" ColumnName="ValueKey" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdRule" ColumnName="IdRule" />
+                <ScalarProperty Name="ValueXml" ColumnName="ValueXml" />
+                <ScalarProperty Name="ValueType" ColumnName="ValueType" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RuleModule">
+            <EntityTypeMapping TypeName="BusinessRulesEngineEFModel.RuleModule">
+              <MappingFragment StoreEntitySet="RuleModule">
+                <ScalarProperty Name="EnabledFlag" ColumnName="EnabledFlag" />
+                <ScalarProperty Name="IfFalseId" ColumnName="IfFalseId" />
+                <ScalarProperty Name="IfTrueId" ColumnName="IfTrueId" />
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+                <ScalarProperty Name="ContextType" ColumnName="ContextType" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IdParentRuleModule" ColumnName="IdParentRuleModule" />
+                <ScalarProperty Name="IdRootRuleModule" ColumnName="IdRootRuleModule" />
+                <ScalarProperty Name="PathType" ColumnName="PathType" />
+                <ScalarProperty Name="RuleModuleType" ColumnName="RuleModuleType" />
+                <ScalarProperty Name="BooleanEvalLogic" ColumnName="BooleanEvalLogic" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RuleModuleCompanyLink">
+            <EntityTypeMapping TypeName="BusinessRulesEngineEFModel.RuleModuleCompanyLink">
+              <MappingFragment StoreEntitySet="RuleModuleCompanyLink">
+                <ScalarProperty Name="IdCompany" ColumnName="IdCompany" />
+                <ScalarProperty Name="IdRuleModule" ColumnName="IdRuleModule" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

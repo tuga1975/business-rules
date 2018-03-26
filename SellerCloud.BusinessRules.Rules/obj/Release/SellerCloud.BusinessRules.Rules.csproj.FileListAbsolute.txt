@@ -1,0 +1,13 @@
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Rules\bin\Release\SellerCloud.BusinessRules.Rules.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Rules\bin\Release\SellerCloud.BusinessRules.Rules.pdb
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Rules\bin\Release\BLToolkit.4.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Rules\bin\Release\Newtonsoft.Json.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Rules\bin\Release\SellerCloud.BusinessRules.Extensions.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Rules\bin\Release\SellerCloud.BusinessRules.Attributes.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Rules\bin\Release\SellerCloud.BusinessRules.Extensions.pdb
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Rules\bin\Release\Newtonsoft.Json.xml
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Rules\bin\Release\SellerCloud.BusinessRules.Attributes.pdb
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Rules\obj\Release\SellerCloud.BusinessRules.Rules.csprojResolveAssemblyReference.cache
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Rules\obj\Release\SellerCloud.BusinessRules.Rules.csproj.CoreCompileInputs.cache
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Rules\obj\Release\SellerCloud.BusinessRules.Rules.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Rules\obj\Release\SellerCloud.BusinessRules.Rules.pdb

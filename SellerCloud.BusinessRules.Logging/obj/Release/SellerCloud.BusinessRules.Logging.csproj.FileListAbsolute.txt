@@ -1,0 +1,12 @@
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Logging\bin\Release\SellerCloud.BusinessRules.Logging.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Logging\bin\Release\SellerCloud.BusinessRules.Logging.pdb
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Logging\bin\Release\log4net.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Logging\bin\Release\SellerCloud.BusinessRules.Extensions.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Logging\bin\Release\SellerCloud.BusinessRules.Attributes.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Logging\bin\Release\SellerCloud.BusinessRules.Extensions.pdb
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Logging\bin\Release\log4net.xml
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Logging\bin\Release\SellerCloud.BusinessRules.Attributes.pdb
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Logging\obj\Release\SellerCloud.BusinessRules.Logging.csprojResolveAssemblyReference.cache
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Logging\obj\Release\SellerCloud.BusinessRules.Logging.csproj.CoreCompileInputs.cache
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Logging\obj\Release\SellerCloud.BusinessRules.Logging.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Logging\obj\Release\SellerCloud.BusinessRules.Logging.pdb

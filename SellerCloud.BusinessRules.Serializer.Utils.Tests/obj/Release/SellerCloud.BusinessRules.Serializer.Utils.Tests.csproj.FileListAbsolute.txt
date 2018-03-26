@@ -1,0 +1,17 @@
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Serializer.Utils.Tests\bin\Release\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Serializer.Utils.Tests\bin\Release\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Serializer.Utils.Tests\bin\Release\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Serializer.Utils.Tests\bin\Release\SellerCloud.BusinessRules.Serializer.Utils.Tests.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Serializer.Utils.Tests\bin\Release\SellerCloud.BusinessRules.Serializer.Utils.Tests.pdb
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Serializer.Utils.Tests\bin\Release\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Serializer.Utils.Tests\bin\Release\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Serializer.Utils.Tests\bin\Release\SellerCloud.BusinessRules.Serializer.Utils.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Serializer.Utils.Tests\bin\Release\Newtonsoft.Json.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Serializer.Utils.Tests\bin\Release\SellerCloud.BusinessRules.Serializer.Utils.pdb
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Serializer.Utils.Tests\bin\Release\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Serializer.Utils.Tests\bin\Release\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Serializer.Utils.Tests\bin\Release\Newtonsoft.Json.xml
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Serializer.Utils.Tests\obj\Release\SellerCloud.BusinessRules.Serializer.Utils.Tests.csprojResolveAssemblyReference.cache
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Serializer.Utils.Tests\obj\Release\SellerCloud.BusinessRules.Serializer.Utils.Tests.csproj.CoreCompileInputs.cache
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Serializer.Utils.Tests\obj\Release\SellerCloud.BusinessRules.Serializer.Utils.Tests.dll
+C:\Data\CORE\BusinessRules.Engine\SellerCloud.BusinessRules.Serializer.Utils.Tests\obj\Release\SellerCloud.BusinessRules.Serializer.Utils.Tests.pdb

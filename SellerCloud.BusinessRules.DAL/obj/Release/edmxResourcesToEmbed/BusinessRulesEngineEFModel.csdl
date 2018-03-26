@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BusinessRulesEngineEFModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Rule">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdRuleModule" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Expression" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RuleType" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="RuleModule" Relationship="Self.FK_Rule_RuleModule_IdRuleModule" FromRole="Rule" ToRole="RuleModule" />
+    <NavigationProperty Name="Arguments" Relationship="Self.FK_RuleArgument_Rule_IdRule" FromRole="Rule" ToRole="RuleArgument" />
+  </EntityType>
+  <EntityType Name="RuleArgument">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdRule" Type="Int32" Nullable="false" />
+    <Property Name="ValueXml" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ValueType" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Position" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Rule" Relationship="Self.FK_RuleArgument_Rule_IdRule" FromRole="RuleArgument" ToRole="Rule" />
+    <Property Name="ValueKey" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="RuleModule">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="IdParentRuleModule" Type="Int32" />
+    <Property Name="IdRootRuleModule" Type="Int32" />
+    <Property Name="PathType" Type="Int32" />
+    <Property Name="RuleModuleType" Type="Int32" Nullable="false" />
+    <Property Name="BooleanEvalLogic" Type="Int32" />
+    <NavigationProperty Name="Rules" Relationship="Self.FK_Rule_RuleModule_IdRuleModule" FromRole="RuleModule" ToRole="Rule" />
+    <NavigationProperty Name="RuleModuleParentLink" Relationship="Self.FK_RuleModule_RuleModule_IdParentRuleModule" FromRole="RuleModule" ToRole="RuleModule1" />
+    <NavigationProperty Name="ParentRuleModule" Relationship="Self.FK_RuleModule_RuleModule_IdParentRuleModule" FromRole="RuleModule1" ToRole="RuleModule" />
+    <NavigationProperty Name="RuleModuleRootLink" Relationship="Self.FK_RuleModule_RuleModule_IdRootRuleModule" FromRole="RuleModule" ToRole="RuleModule1" />
+    <NavigationProperty Name="RootRuleModule" Relationship="Self.FK_RuleModule_RuleModule_IdRootRuleModule" FromRole="RuleModule1" ToRole="RuleModule" />
+    <NavigationProperty Name="RuleModuleCompanyLinks" Relationship="BusinessRulesEngineEFModel.FK_RuleModuleCompanyLink_RuleModule_IdRuleModule" FromRole="RuleModule" ToRole="RuleModuleCompanyLink" />
+    <Property Name="ContextType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ClientID" Type="Int32" />
+  </EntityType>
+  <Association Name="FK_Rule_RuleModule_IdRuleModule">
+    <End Role="RuleModule" Type="Self.RuleModule" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Rule" Type="Self.Rule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RuleModule">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Rule">
+        <PropertyRef Name="IdRuleModule" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RuleArgument_Rule_IdRule">
+    <End Role="Rule" Type="Self.Rule" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="RuleArgument" Type="Self.RuleArgument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rule">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RuleArgument">
+        <PropertyRef Name="IdRule" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RuleModule_RuleModule_IdParentRuleModule">
+    <End Role="RuleModule" Type="Self.RuleModule" Multiplicity="0..1" />
+    <End Role="RuleModule1" Type="Self.RuleModule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RuleModule">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RuleModule1">
+        <PropertyRef Name="IdParentRuleModule" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RuleModule_RuleModule_IdRootRuleModule">
+    <End Role="RuleModule" Type="Self.RuleModule" Multiplicity="0..1" />
+    <End Role="RuleModule1" Type="Self.RuleModule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RuleModule">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RuleModule1">
+        <PropertyRef Name="IdRootRuleModule" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BusinessRulesEngineEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Rule" EntityType="Self.Rule" />
+    <EntitySet Name="RuleArgument" EntityType="Self.RuleArgument" />
+    <EntitySet Name="RuleModule" EntityType="Self.RuleModule" />
+    <AssociationSet Name="FK_Rule_RuleModule_IdRuleModule" Association="Self.FK_Rule_RuleModule_IdRuleModule">
+      <End Role="RuleModule" EntitySet="RuleModule" />
+      <End Role="Rule" EntitySet="Rule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RuleArgument_Rule_IdRule" Association="Self.FK_RuleArgument_Rule_IdRule">
+      <End Role="Rule" EntitySet="Rule" />
+      <End Role="RuleArgument" EntitySet="RuleArgument" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RuleModule_RuleModule_IdParentRuleModule" Association="Self.FK_RuleModule_RuleModule_IdParentRuleModule">
+      <End Role="RuleModule" EntitySet="RuleModule" />
+      <End Role="RuleModule1" EntitySet="RuleModule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RuleModule_RuleModule_IdRootRuleModule" Association="Self.FK_RuleModule_RuleModule_IdRootRuleModule">
+      <End Role="RuleModule" EntitySet="RuleModule" />
+      <End Role="RuleModule1" EntitySet="RuleModule" />
+    </AssociationSet>
+    <EntitySet Name="RuleModuleCompanyLink" EntityType="BusinessRulesEngineEFModel.RuleModuleCompanyLink" />
+    <AssociationSet Name="FK_RuleModuleCompanyLink_RuleModule_IdRuleModule" Association="BusinessRulesEngineEFModel.FK_RuleModuleCompanyLink_RuleModule_IdRuleModule">
+      <End Role="RuleModule" EntitySet="RuleModule" />
+      <End Role="RuleModuleCompanyLink" EntitySet="RuleModuleCompanyLink" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="RuleModuleCompanyLink">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdRuleModule" Type="Int32" Nullable="false" />
+    <Property Name="IdCompany" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="RuleModule" Relationship="BusinessRulesEngineEFModel.FK_RuleModuleCompanyLink_RuleModule_IdRuleModule" FromRole="RuleModuleCompanyLink" ToRole="RuleModule" />
+  </EntityType>
+  <Association Name="FK_RuleModuleCompanyLink_RuleModule_IdRuleModule">
+    <End Type="BusinessRulesEngineEFModel.RuleModule" Role="RuleModule" Multiplicity="1" />
+    <End Type="BusinessRulesEngineEFModel.RuleModuleCompanyLink" Role="RuleModuleCompanyLink" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RuleModule">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RuleModuleCompanyLink">
+        <PropertyRef Name="IdRuleModule" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

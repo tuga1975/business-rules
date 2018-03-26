@@ -1,0 +1,220 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SellerCloud.BusinessRules.Serializer", "SellerCloud.BusinessRules.Serializer", "{6C8AEDD5-06B9-4CA7-8977-A088C36B56AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SellerCloud.BusinessRules.Attributes", "SellerCloud.BusinessRules.Attributes\SellerCloud.BusinessRules.Attributes.csproj", "{B9911939-418A-4EB6-9737-32547817E6E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SellerCloud.BusinessRules.TypeSerializer", "SellerCloud.BusinessRules.TypeSerializer\SellerCloud.BusinessRules.TypeSerializer.csproj", "{DAD8CF5F-7CFB-4394-9394-64A52614AA12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SellerCloud.BusinessRules.TypeSerializer.Tests", "SellerCloud.BusinessRules.TypeSerializer.Tests\SellerCloud.BusinessRules.TypeSerializer.Tests.csproj", "{F5C92E66-46CC-4FC3-845D-ED6F050B7B7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SellerCloud.BusinessRules.Serializer.Utils", "SellerCloud.BusinessRules.Serializer.Utils\SellerCloud.BusinessRules.Serializer.Utils.csproj", "{41AA3B8E-0807-4FF0-B0FE-822960469CD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SellerCloud.BusinessRules.Serializer.Utils.Tests", "SellerCloud.BusinessRules.Serializer.Utils.Tests\SellerCloud.BusinessRules.Serializer.Utils.Tests.csproj", "{39D38A2A-0157-464B-A06F-D509C6365EE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SellerCloud.BusinessRules.Serializer.Facade", "SellerCloud.BusinessRules.Serializer.Facade\SellerCloud.BusinessRules.Serializer.Facade.csproj", "{41CF7E15-0EE8-4E5B-848C-05BFA7B330D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SellerCloud.BusinessRules.OperationsSerializer", "SellerCloud.BusinessRules.OperationsSerializer\SellerCloud.BusinessRules.OperationsSerializer.csproj", "{A0BF061E-A4E5-4A9D-990A-D0764E976C2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SellerCloud.BusinessRules.OperationsSerializer.Tests", "SellerCloud.BusinessRules.OperationsSerializer.Tests\SellerCloud.BusinessRules.OperationsSerializer.Tests.csproj", "{E1771AF9-67FC-4868-A041-60C04A0C6C3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SellerCloud.BusinessRules.Compilers", "SellerCloud.BusinessRules.Compilers\SellerCloud.BusinessRules.Compilers.csproj", "{B3E2C500-D55E-4840-AE87-AB4657BC0AA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SellerCloud.BusinessRules.EntityTracking", "SellerCloud.BusinessRules.EntityTracking\SellerCloud.BusinessRules.EntityTracking.csproj", "{1ACC1EAE-BA37-42FC-8CAA-10B60E8E16B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SellerCloud.BusinessRules.Extensions", "SellerCloud.BusinessRules.Extensions\SellerCloud.BusinessRules.Extensions.csproj", "{3D35BEB9-B4BB-433B-87EC-4BC91B9088DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SellerCloud.BusinessRules.Logging", "SellerCloud.BusinessRules.Logging\SellerCloud.BusinessRules.Logging.csproj", "{58980B5C-9C8D-4C76-969C-40CB7BA0FE91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SellerCloud.BusinessRules.Models", "SellerCloud.BusinessRules.Models\SellerCloud.BusinessRules.Models.csproj", "{3541A541-0384-4004-9134-989C21C0E147}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SellerCloud.BusinessRules.Rules", "SellerCloud.BusinessRules.Rules\SellerCloud.BusinessRules.Rules.csproj", "{EBF744A7-1FFF-4FC4-8709-F110F9F8C3A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SellerCloud.BusinessRules.Tests", "SellerCloud.BusinessRules.Tests\SellerCloud.BusinessRules.Tests.csproj", "{740A53AE-3EB9-4B4F-AED7-F6B5FA5F4336}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SellerCloud.BusinessRules.Validator", "SellerCloud.BusinessRules.Validator\SellerCloud.BusinessRules.Validator.csproj", "{C6E1ECF3-3D15-4683-9A4C-56C041919E65}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccessLayer", "DataAccessLayer", "{5F7FDDCF-9B3C-4B82-9517-74C45D34A11A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SellerCloud.BusinessRules.DAL", "SellerCloud.BusinessRules.DAL\SellerCloud.BusinessRules.DAL.csproj", "{6032B259-AA6A-4A79-95AE-4492B329BD0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SellerCloud.BusinessRules.Facade", "SellerCloud.BusinessRules.Facade\SellerCloud.BusinessRules.Facade.csproj", "{E43AAA6B-4635-408D-A6B7-52756826D276}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SellerCloud.BusinessRules.DAL.Tests", "SellerCloud.BusinessRules.DAL.Tests\SellerCloud.BusinessRules.DAL.Tests.csproj", "{9556DBD7-4769-403D-9C95-DE36C935DCD9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9911939-418A-4EB6-9737-32547817E6E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9911939-418A-4EB6-9737-32547817E6E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9911939-418A-4EB6-9737-32547817E6E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9911939-418A-4EB6-9737-32547817E6E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAD8CF5F-7CFB-4394-9394-64A52614AA12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAD8CF5F-7CFB-4394-9394-64A52614AA12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAD8CF5F-7CFB-4394-9394-64A52614AA12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAD8CF5F-7CFB-4394-9394-64A52614AA12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5C92E66-46CC-4FC3-845D-ED6F050B7B7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5C92E66-46CC-4FC3-845D-ED6F050B7B7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5C92E66-46CC-4FC3-845D-ED6F050B7B7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5C92E66-46CC-4FC3-845D-ED6F050B7B7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41AA3B8E-0807-4FF0-B0FE-822960469CD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41AA3B8E-0807-4FF0-B0FE-822960469CD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41AA3B8E-0807-4FF0-B0FE-822960469CD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41AA3B8E-0807-4FF0-B0FE-822960469CD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39D38A2A-0157-464B-A06F-D509C6365EE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39D38A2A-0157-464B-A06F-D509C6365EE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39D38A2A-0157-464B-A06F-D509C6365EE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39D38A2A-0157-464B-A06F-D509C6365EE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41CF7E15-0EE8-4E5B-848C-05BFA7B330D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41CF7E15-0EE8-4E5B-848C-05BFA7B330D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41CF7E15-0EE8-4E5B-848C-05BFA7B330D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41CF7E15-0EE8-4E5B-848C-05BFA7B330D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0BF061E-A4E5-4A9D-990A-D0764E976C2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0BF061E-A4E5-4A9D-990A-D0764E976C2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0BF061E-A4E5-4A9D-990A-D0764E976C2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0BF061E-A4E5-4A9D-990A-D0764E976C2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1771AF9-67FC-4868-A041-60C04A0C6C3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1771AF9-67FC-4868-A041-60C04A0C6C3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1771AF9-67FC-4868-A041-60C04A0C6C3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1771AF9-67FC-4868-A041-60C04A0C6C3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3E2C500-D55E-4840-AE87-AB4657BC0AA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3E2C500-D55E-4840-AE87-AB4657BC0AA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3E2C500-D55E-4840-AE87-AB4657BC0AA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3E2C500-D55E-4840-AE87-AB4657BC0AA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ACC1EAE-BA37-42FC-8CAA-10B60E8E16B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ACC1EAE-BA37-42FC-8CAA-10B60E8E16B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ACC1EAE-BA37-42FC-8CAA-10B60E8E16B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ACC1EAE-BA37-42FC-8CAA-10B60E8E16B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D35BEB9-B4BB-433B-87EC-4BC91B9088DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D35BEB9-B4BB-433B-87EC-4BC91B9088DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D35BEB9-B4BB-433B-87EC-4BC91B9088DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D35BEB9-B4BB-433B-87EC-4BC91B9088DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58980B5C-9C8D-4C76-969C-40CB7BA0FE91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58980B5C-9C8D-4C76-969C-40CB7BA0FE91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58980B5C-9C8D-4C76-969C-40CB7BA0FE91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58980B5C-9C8D-4C76-969C-40CB7BA0FE91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3541A541-0384-4004-9134-989C21C0E147}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3541A541-0384-4004-9134-989C21C0E147}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3541A541-0384-4004-9134-989C21C0E147}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3541A541-0384-4004-9134-989C21C0E147}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBF744A7-1FFF-4FC4-8709-F110F9F8C3A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBF744A7-1FFF-4FC4-8709-F110F9F8C3A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBF744A7-1FFF-4FC4-8709-F110F9F8C3A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBF744A7-1FFF-4FC4-8709-F110F9F8C3A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{740A53AE-3EB9-4B4F-AED7-F6B5FA5F4336}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{740A53AE-3EB9-4B4F-AED7-F6B5FA5F4336}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{740A53AE-3EB9-4B4F-AED7-F6B5FA5F4336}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{740A53AE-3EB9-4B4F-AED7-F6B5FA5F4336}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6E1ECF3-3D15-4683-9A4C-56C041919E65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6E1ECF3-3D15-4683-9A4C-56C041919E65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6E1ECF3-3D15-4683-9A4C-56C041919E65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6E1ECF3-3D15-4683-9A4C-56C041919E65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6032B259-AA6A-4A79-95AE-4492B329BD0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6032B259-AA6A-4A79-95AE-4492B329BD0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6032B259-AA6A-4A79-95AE-4492B329BD0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6032B259-AA6A-4A79-95AE-4492B329BD0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E43AAA6B-4635-408D-A6B7-52756826D276}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E43AAA6B-4635-408D-A6B7-52756826D276}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E43AAA6B-4635-408D-A6B7-52756826D276}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E43AAA6B-4635-408D-A6B7-52756826D276}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9556DBD7-4769-403D-9C95-DE36C935DCD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9556DBD7-4769-403D-9C95-DE36C935DCD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9556DBD7-4769-403D-9C95-DE36C935DCD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9556DBD7-4769-403D-9C95-DE36C935DCD9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DAD8CF5F-7CFB-4394-9394-64A52614AA12} = {6C8AEDD5-06B9-4CA7-8977-A088C36B56AE}
+		{F5C92E66-46CC-4FC3-845D-ED6F050B7B7A} = {6C8AEDD5-06B9-4CA7-8977-A088C36B56AE}
+		{41AA3B8E-0807-4FF0-B0FE-822960469CD9} = {6C8AEDD5-06B9-4CA7-8977-A088C36B56AE}
+		{39D38A2A-0157-464B-A06F-D509C6365EE2} = {6C8AEDD5-06B9-4CA7-8977-A088C36B56AE}
+		{41CF7E15-0EE8-4E5B-848C-05BFA7B330D4} = {6C8AEDD5-06B9-4CA7-8977-A088C36B56AE}
+		{A0BF061E-A4E5-4A9D-990A-D0764E976C2A} = {6C8AEDD5-06B9-4CA7-8977-A088C36B56AE}
+		{E1771AF9-67FC-4868-A041-60C04A0C6C3D} = {6C8AEDD5-06B9-4CA7-8977-A088C36B56AE}
+		{6032B259-AA6A-4A79-95AE-4492B329BD0F} = {5F7FDDCF-9B3C-4B82-9517-74C45D34A11A}
+		{9556DBD7-4769-403D-9C95-DE36C935DCD9} = {5F7FDDCF-9B3C-4B82-9517-74C45D34A11A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D9C7CB0-CB6E-4334-9B7F-D9D73D4BEA23}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 20
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs.sellercloud.com:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SellerCloud.BusinessRules.Attributes\\SellerCloud.BusinessRules.Attributes.csproj
+		SccProjectName1 = SellerCloud.BusinessRules.Attributes
+		SccLocalPath1 = SellerCloud.BusinessRules.Attributes
+		SccProjectUniqueName2 = SellerCloud.BusinessRules.TypeSerializer\\SellerCloud.BusinessRules.TypeSerializer.csproj
+		SccProjectTopLevelParentUniqueName2 = BusinessRules.Engine.sln
+		SccProjectName2 = SellerCloud.BusinessRules.TypeSerializer
+		SccLocalPath2 = SellerCloud.BusinessRules.TypeSerializer
+		SccProjectUniqueName3 = SellerCloud.BusinessRules.TypeSerializer.Tests\\SellerCloud.BusinessRules.TypeSerializer.Tests.csproj
+		SccProjectTopLevelParentUniqueName3 = BusinessRules.Engine.sln
+		SccProjectName3 = SellerCloud.BusinessRules.TypeSerializer.Tests
+		SccLocalPath3 = SellerCloud.BusinessRules.TypeSerializer.Tests
+		SccProjectUniqueName4 = SellerCloud.BusinessRules.Serializer.Utils\\SellerCloud.BusinessRules.Serializer.Utils.csproj
+		SccProjectTopLevelParentUniqueName4 = BusinessRules.Engine.sln
+		SccProjectName4 = SellerCloud.BusinessRules.Serializer.Utils
+		SccLocalPath4 = SellerCloud.BusinessRules.Serializer.Utils
+		SccProjectUniqueName5 = SellerCloud.BusinessRules.Serializer.Utils.Tests\\SellerCloud.BusinessRules.Serializer.Utils.Tests.csproj
+		SccProjectTopLevelParentUniqueName5 = BusinessRules.Engine.sln
+		SccProjectName5 = SellerCloud.BusinessRules.Serializer.Utils.Tests
+		SccLocalPath5 = SellerCloud.BusinessRules.Serializer.Utils.Tests
+		SccProjectUniqueName6 = SellerCloud.BusinessRules.Serializer.Facade\\SellerCloud.BusinessRules.Serializer.Facade.csproj
+		SccProjectTopLevelParentUniqueName6 = BusinessRules.Engine.sln
+		SccProjectName6 = SellerCloud.BusinessRules.Serializer.Facade
+		SccLocalPath6 = SellerCloud.BusinessRules.Serializer.Facade
+		SccProjectUniqueName7 = SellerCloud.BusinessRules.OperationsSerializer\\SellerCloud.BusinessRules.OperationsSerializer.csproj
+		SccProjectTopLevelParentUniqueName7 = BusinessRules.Engine.sln
+		SccProjectName7 = SellerCloud.BusinessRules.OperationsSerializer
+		SccLocalPath7 = SellerCloud.BusinessRules.OperationsSerializer
+		SccProjectUniqueName8 = SellerCloud.BusinessRules.OperationsSerializer.Tests\\SellerCloud.BusinessRules.OperationsSerializer.Tests.csproj
+		SccProjectTopLevelParentUniqueName8 = BusinessRules.Engine.sln
+		SccProjectName8 = SellerCloud.BusinessRules.OperationsSerializer.Tests
+		SccLocalPath8 = SellerCloud.BusinessRules.OperationsSerializer.Tests
+		SccProjectUniqueName9 = SellerCloud.BusinessRules.Compilers\\SellerCloud.BusinessRules.Compilers.csproj
+		SccProjectName9 = SellerCloud.BusinessRules.Compilers
+		SccLocalPath9 = SellerCloud.BusinessRules.Compilers
+		SccProjectUniqueName10 = SellerCloud.BusinessRules.EntityTracking\\SellerCloud.BusinessRules.EntityTracking.csproj
+		SccProjectName10 = SellerCloud.BusinessRules.EntityTracking
+		SccLocalPath10 = SellerCloud.BusinessRules.EntityTracking
+		SccProjectUniqueName11 = SellerCloud.BusinessRules.Extensions\\SellerCloud.BusinessRules.Extensions.csproj
+		SccProjectName11 = SellerCloud.BusinessRules.Extensions
+		SccLocalPath11 = SellerCloud.BusinessRules.Extensions
+		SccProjectUniqueName12 = SellerCloud.BusinessRules.Logging\\SellerCloud.BusinessRules.Logging.csproj
+		SccProjectName12 = SellerCloud.BusinessRules.Logging
+		SccLocalPath12 = SellerCloud.BusinessRules.Logging
+		SccProjectUniqueName13 = SellerCloud.BusinessRules.Models\\SellerCloud.BusinessRules.Models.csproj
+		SccProjectName13 = SellerCloud.BusinessRules.Models
+		SccLocalPath13 = SellerCloud.BusinessRules.Models
+		SccProjectUniqueName14 = SellerCloud.BusinessRules.Rules\\SellerCloud.BusinessRules.Rules.csproj
+		SccProjectName14 = SellerCloud.BusinessRules.Rules
+		SccLocalPath14 = SellerCloud.BusinessRules.Rules
+		SccProjectUniqueName15 = SellerCloud.BusinessRules.Tests\\SellerCloud.BusinessRules.Tests.csproj
+		SccProjectName15 = SellerCloud.BusinessRules.Tests
+		SccLocalPath15 = SellerCloud.BusinessRules.Tests
+		SccProjectUniqueName16 = SellerCloud.BusinessRules.Validator\\SellerCloud.BusinessRules.Validator.csproj
+		SccProjectName16 = SellerCloud.BusinessRules.Validator
+		SccLocalPath16 = SellerCloud.BusinessRules.Validator
+		SccProjectUniqueName17 = SellerCloud.BusinessRules.DAL\\SellerCloud.BusinessRules.DAL.csproj
+		SccProjectTopLevelParentUniqueName17 = BusinessRules.Engine.sln
+		SccProjectName17 = SellerCloud.BusinessRules.DAL
+		SccLocalPath17 = SellerCloud.BusinessRules.DAL
+		SccProjectUniqueName18 = SellerCloud.BusinessRules.Facade\\SellerCloud.BusinessRules.Facade.csproj
+		SccProjectName18 = SellerCloud.BusinessRules.Facade
+		SccLocalPath18 = SellerCloud.BusinessRules.Facade
+		SccProjectUniqueName19 = SellerCloud.BusinessRules.DAL.Tests\\SellerCloud.BusinessRules.DAL.Tests.csproj
+		SccProjectTopLevelParentUniqueName19 = BusinessRules.Engine.sln
+		SccProjectName19 = SellerCloud.BusinessRules.DAL.Tests
+		SccLocalPath19 = SellerCloud.BusinessRules.DAL.Tests
+	EndGlobalSection
+EndGlobal
